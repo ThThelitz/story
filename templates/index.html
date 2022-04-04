@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Beep Boop</title>
+{% extends "layout.html" %}
 
-  <!-- FONT -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+{% block title %}
+    Start
+{% endblock %}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="static/normalize.css">
-  <link rel="stylesheet" href="static/skeleton.css">
-  <link rel="stylesheet" href="static/styles.css">
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>It's sunny.</h4>
-        <p>It's a beautiful morning in the fourth floor of the Information Commons building, as the sun lights up the whole city and rolling hills behind it. The sky is blue and the world here is ok.</p>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+{% block main %}
+    Click <a href="/1">here</a> to get to lexia 1.
+{% endblock %}

@@ -12,5 +12,9 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 def index():
     return render_template("index.html")
 
+@app.route("/1")
+def lexia_1():
+    return render_template("1.html")
+
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
