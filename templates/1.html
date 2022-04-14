@@ -5,7 +5,11 @@
 {% endblock %}
 
 {% block main %}
-    <h4>Please create your password.</h4>
+    <h4 id="test">Please create your password.</h4>
     <p>Enter your password below, and make sure you'll remember it.</p>
+    <form id="pw-form">
+        <input type="text" id="pw">
+        <input type="submit">
+    </form>
     <button onclick="increasePoints()">Storage test button</button>
 {% endblock %}
