@@ -12,7 +12,7 @@ def index():
     return render_template("welcome.html")
 
 @app.route("/1")
-def index():
+def lexia_1():
     return render_template("start.html")
 
 @app.route("/2")
@@ -20,7 +20,7 @@ def lexia_2():
     return render_template("create_password.html")
 
 @app.route("/3")
-def lexia_4():
+def lexia_3():
     return render_template("email_login.html")
 
 @app.route("/4")
