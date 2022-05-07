@@ -8,7 +8,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route("/")
-def index():
+def welcome():
     return render_template("welcome.html")
 
 @app.route("/1")
@@ -26,7 +26,6 @@ def lexia_3():
 @app.route("/4")
 def lexia_4():
     return "I'm definitely a real website"
-
 
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True
