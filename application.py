@@ -25,7 +25,11 @@ def lexia_3():
 
 @app.route("/4")
 def lexia_4():
-    return "I'm definitely a real website"
+    return render_template("email_writing.html")
+
+@app.route("/5")
+def lexia_5():
+    return render_template("wrong_password.html")
 
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True
