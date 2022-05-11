@@ -25,11 +25,19 @@ def lexia_3():
 
 @app.route("/4")
 def lexia_4():
-    return render_template("email_writing.html")
+    return render_template("wrong_password.html")
 
 @app.route("/5")
 def lexia_5():
-    return render_template("wrong_password.html")
+    return render_template("email_request.html")
+
+@app.route("/6")
+def lexia_7():
+    return render_template("email_repeat.html")
+
+@app.route("/7")
+def lexia_8():
+    return render_template("email_booked.html")
 
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True

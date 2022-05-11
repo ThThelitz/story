@@ -10,3 +10,7 @@ h1 {
 body {
     font-family: monospace;
 }
+
+.selected {
+    background-color: azure;
+}

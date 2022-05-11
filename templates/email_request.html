@@ -1,0 +1,42 @@
+{% extends "email_layout.html" %}
+
+{% block content %}
+    <p>
+        Sender: globalopps@grundleplith.ac.uk<br>
+        <strong>Subject: Please Choose Your Modules</strong><br>
+    </p>
+    <p>
+        Hello this is text.
+
+    </p>
+    <p>
+        Modules perhaps as skeleton table with a button in one col.
+        <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Location</th>
+                <th>Book</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dave Gamache</td>
+                <td>26</td>
+                <td>Male</td>
+                <td>San Francisco</td>
+                <td><button class="book">Book</button></td>
+              </tr>
+              <tr>
+                <td>Dwayne Johnson</td>
+                <td>42</td>
+                <td>Male</td>
+                <td>Hayward</td>
+                <td><button class="book">Book</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </p>
+{% endblock %}
