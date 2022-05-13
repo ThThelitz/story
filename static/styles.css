@@ -3,12 +3,16 @@
     src: url(Creepster-Regular.ttf);
 }
 
+body {
+    font-family: monospace;
+}
+
 h1 {
     font-family: Spook, monospace;
 }
 
-body {
-    font-family: monospace;
+.book {
+    margin: 5px;
 }
 
 .selected {
