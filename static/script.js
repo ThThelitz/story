@@ -87,6 +87,32 @@ if (pwEntry != null) {
     })
 }
 
+// On submitting modules, check if any are full and route accordingly
+let mSubmit = document.getElementById("module-submit")
+if (mSubmit != null) {
+    mSubmit.addEventListener("click", function(ev) {
+        let rows = document.getElementsByTagName("tr")
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i];
+            if (row.className == "selected") {
+                // I SHALL CLAIM YOUR FIRSTBORN
+                let selectedCode = row.firstChild.innerHTML
+                for (const module of modules) {
+                    if (selectedCode == module.code) {
+                        if (module.full) {
+                            window.location = "/6"
+                            return
+                        }
+                    }
+                }
+            }
+            
+        }
+        // If all selected modules are not full
+        window.location = "/7"
+    })
+}
+
 // Select and deselect table buttons
 let moduleSelectBtns = document.getElementsByClassName("book")
 if (moduleSelectBtns.length > 0) {
