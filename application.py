@@ -32,11 +32,11 @@ def lexia_5():
     return render_template("email_request.html")
 
 @app.route("/6")
-def lexia_7():
+def lexia_6():
     return render_template("email_repeat.html")
 
 @app.route("/7")
-def lexia_8():
+def lexia_7():
     return render_template("email_booked.html")
 
 if __name__ == "__main__":

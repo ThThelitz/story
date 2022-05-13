@@ -19,6 +19,44 @@ let modules = [
     new Module("0009", "Module9", 6)
 ]
 
+// Build table
+// Will apply to any table element
+let tableEl = document.getElementsByTagName("table")[0]
+if (tableEl != null) {
+    // Add header row
+    let thead = document.createElement("thead")
+    const header = ["Code", "Title", "Credits", "Book"]
+    let tr = document.createElement("tr")
+    for (const item of header) {
+        let th = document.createElement("th")
+        th.innerHTML = item
+        tr.append(th)
+    }
+    thead.append(tr)
+
+    // Add table rows
+    let tbody = document.createElement("tbody")
+    for (const module of modules) {
+        tr = document.createElement("tr")
+        let td1 = document.createElement("td")
+        let td2 = document.createElement("td")
+        let td3 = document.createElement("td")
+        let td4 = document.createElement("td")
+        td1.innerHTML = module.code
+        td2.innerHTML = module.title
+        td3.innerHTML = module.credits
+        button = document.createElement("button")
+        button.className = "book"
+        button.innerHTML = "Book"
+        td4.append(button)
+        tr.append(td1, td2, td3, td4)
+        tbody.append(tr)
+    }
+
+    tableEl.append(thead)
+    tableEl.append(tbody)
+}
+
 // Store password in local storage on submit (encoding uncertain)
 // Only used in create_password
 let pwForm = document.getElementById("set-pw-form")
@@ -49,6 +87,7 @@ if (pwEntry != null) {
     })
 }
 
+// Select and deselect table buttons
 let moduleSelectBtns = document.getElementsByClassName("book")
 if (moduleSelectBtns.length > 0) {
     for (let i = 0; i < moduleSelectBtns.length; i++) {
@@ -57,10 +96,15 @@ if (moduleSelectBtns.length > 0) {
             btnEl = ev.target
             cell = btnEl.parentElement
             row = cell.parentElement
-            row.className = "selected"
+            if (row.className == "selected") {
+                row.className = ""
+                btnEl.innerHTML = "Book"
+            }
+            else {
+                row.className = "selected"
+                btnEl.innerHTML = "Drop"
+            }  
         })
     }
-    alert("moduleSelectBtns is > 0")
 }
-
 
