@@ -33,11 +33,15 @@ def lexia_5():
 
 @app.route("/6")
 def lexia_6():
-    return render_template("email_repeat.html")
+    return render_template("email_booked.html")
 
 @app.route("/7")
 def lexia_7():
-    return render_template("email_booked.html")
+    return render_template("email_error_full.html")
+
+@app.route("/8")
+def lexia_8():
+    return render_template("email_error_credits.html")
 
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True

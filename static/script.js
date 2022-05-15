@@ -91,6 +91,8 @@ if (pwEntry != null) {
 let mSubmit = document.getElementById("module-submit")
 if (mSubmit != null) {
     mSubmit.addEventListener("click", function(ev) {
+        let fullModules = []
+        let credits = 0
         let rows = document.getElementsByTagName("tr")
         for (let i = 0; i < rows.length; i++) {
             const row = rows[i];
@@ -99,17 +101,23 @@ if (mSubmit != null) {
                 let selectedCode = row.firstChild.innerHTML
                 for (const module of modules) {
                     if (selectedCode == module.code) {
+                        credits += module.credits
                         if (module.full) {
-                            window.location = "/6"
-                            return
+                            fullModules.push(module.code)
                         }
                     }
                 }
             }
-            
         }
-        // If all selected modules are not full
-        window.location = "/7"
+        // Remember full modules for displaying them later
+        localStorage.setItem("fullModules", JSON.stringify(fullModules))
+        if ((fullModules.length == 0) && (credits == 12)) {
+            window.location = "/6"
+        } else if (credits == 12) {
+            window.location = "/7"
+        } else {
+            window.location = "/8"
+        }
     })
 }
 
@@ -132,5 +140,26 @@ if (moduleSelectBtns.length > 0) {
             }  
         })
     }
+}
+
+// Fill list of full modules
+let fullModuleList = document.getElementById("full-modules")
+if (fullModuleList != null) {
+    fullModulesLoaded = JSON.parse(localStorage.getItem("fullModules"))
+    for (module of fullModulesLoaded) {
+        let li = document.createElement("li")
+        li.innerHTML = module
+        fullModuleList.append(li)
+    }
+}
+
+// Fill confirmation list with elements 5 and 6 of internal module list
+let bookedModuleList = document.getElementById("booked-modules")
+if (bookedModuleList != null) {
+    let li1 = document.createElement("li")
+    li1.innerHTML = modules[5].title
+    let li2 = document.createElement("li")
+    li2.innerHTML = modules[6].title
+    bookedModuleList.append(li1, li2)
 }
 
