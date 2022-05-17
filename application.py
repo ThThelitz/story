@@ -43,6 +43,15 @@ def lexia_7():
 def lexia_8():
     return render_template("email_error_credits.html")
 
+@app.route("/9")
+def lexia_9():
+    return render_template("welcome_week.html")
+
+@app.route("/10")
+def lexia_10():
+    return render_template("week_1.html")
+
+
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True
     app.run(debug=True, use_reloader=False)
