@@ -51,6 +51,18 @@ def lexia_9():
 def lexia_10():
     return render_template("week_1.html")
 
+@app.route("/11")
+def lexia_11():
+    return render_template("building.html")
+
+@app.route("/12")
+def lexia_12():
+    return render_template("floor.html")
+
+@app.route("/13")
+def lexia_13():
+    return render_template("grill.html")
+
 
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True

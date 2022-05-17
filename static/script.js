@@ -163,3 +163,19 @@ if (bookedModuleList != null) {
     bookedModuleList.append(li1, li2)
 }
 
+// On building click, save building in local storage
+let buildingLinks = document.getElementsByClassName("bldg-link")
+if (buildingLinks.length > 0) {
+    for (let i = 0; i < buildingLinks.length; i++) {
+        let link = buildingLinks[i]
+        link.addEventListener("click", function(ev) {
+            // Prevent redirect until after we've saved the letter
+            ev.preventDefault()
+            linkEl = ev.target
+            // NB: [0] returns undefined on empty string
+            let buildingChar = linkEl.innerHTML[0]
+            localStorage.setItem("building", buildingChar)
+            window.location = "/11"
+        })
+    }
+}
