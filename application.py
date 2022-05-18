@@ -63,6 +63,12 @@ def lexia_12():
 def lexia_13():
     return render_template("grill.html")
 
+@app.route("/999")
+def test():
+    return render_template("test.html")
+
+
+
 
 if __name__ == "__main__":
     app.config["TEMPLATES_AUTO_RELOAD"] = True

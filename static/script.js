@@ -7,7 +7,7 @@ class Module {
     }
 }
 
-let modules = [
+const modules = [
     new Module("0001", "Module1", 4, full=false),
     new Module("0002", "Module2", 4, full=false),
     new Module("0003", "Murderers and Degenerates", 4),
@@ -18,6 +18,16 @@ let modules = [
     new Module("0008", "Module8", 6),
     new Module("0009", "Module9", 6)
 ]
+
+const howHighIs = {
+    S: 10,
+    B: 10,
+    J: 10,
+    F: 10
+}
+
+const floors = ["A", "B", "C", "D", "E", "F", "G", "H", "I", 
+                "J", "K", "L", "M", "O", "P", "Q", "R", "S"]
 
 // Build table
 // Will apply to any table element
@@ -178,4 +188,52 @@ if (buildingLinks.length > 0) {
             window.location = "/11"
         })
     }
+}
+
+// Build floors
+let floorList = document.getElementById("floor-list")
+if (floorList != null) {
+    let buildingID = localStorage.getItem("building")
+    floorAmount = howHighIs[buildingID]
+
+    // Perhaps choose floors before loop, allowing specific additions
+    floorChars = choose(floors, floorAmount)
+
+    let col1 = document.getElementById("col1")
+    let col2 = document.getElementById("col2")
+
+    for (let i = 0; i < floorAmount; i++) {
+        let floorChar = floorChars[i]
+        
+        let floorWord = "Floor"
+        rng = Math.random()
+        if (rng > 0.8) {
+            floorWord = "Level"
+        }
+
+        let activeCol = col2
+        if (i < (floorAmount / 2)) {
+            activeCol = col1
+        }
+
+        // Build element
+        let floor = document.createElement("p")
+        let floorLink = document.createElement("a")
+        floorLink.href = "/12"
+        floorLink.className = "floor-link"
+        floorLink.innerHTML = floorWord + " " + floorChar
+        floor.append(floorLink)
+        activeCol.append(floor)
+    }
+}
+
+// Choose n random elements from array
+// Actually, remove random elements until target length is reached
+function choose(array, n) {
+    rArray = [...array]
+    while (rArray.length > n) {
+        randomIndex = Math.floor(Math.random() * rArray.length)
+        rArray.splice(randomIndex, 1)
+    }
+    return rArray
 }
