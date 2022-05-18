@@ -63,10 +63,47 @@ def lexia_12():
 def lexia_13():
     return render_template("grill.html")
 
-@app.route("/999")
-def test():
+@app.route("/14")
+def lexia_14():
+    return render_template("room_LH45957.html")
+
+@app.route("/15")
+def lexia_15():
+    return render_template("room_LH45957_fake1.html")
+
+@app.route("/16")
+def lexia_16():
+    return render_template("room_LH45957_fake2.html")
+
+@app.route("/17")
+def lexia_17():
+    return render_template("room_LH45957_fake3.html")
+
+@app.route("/18")
+def lexia_18():
+    return render_template("room_LH45957_fake4.html")
+
+# unused
+@app.route("/19")
+def lexia_19():
     return render_template("test.html")
 
+# unused
+@app.route("/20")
+def lexia_20():
+    return render_template("test.html")
+
+@app.route("/21")
+def lexia_21():
+    return render_template("room_1.html")
+
+@app.route("/22")
+def lexia_22():
+    return render_template("room_2.html")
+
+@app.route("/23")
+def lexia_23():
+    return render_template("room_3.html")
 
 
 

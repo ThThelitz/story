@@ -7,6 +7,13 @@ class Module {
     }
 }
 
+class Room {
+    constructor(name, link) {
+        this.name = name
+        this.link = link
+    }
+}
+
 const modules = [
     new Module("0001", "Module1", 4, full=false),
     new Module("0002", "Module2", 4, full=false),
@@ -26,8 +33,40 @@ const howHighIs = {
     F: 10
 }
 
-const floors = ["A", "B", "C", "D", "E", "F", "G", "H", "I", 
-                "J", "K", "L", "M", "O", "P", "Q", "R", "S"]
+const howManyRoomsIn = {
+    A: 10,
+    B: 10,
+    C: 10,
+    D: 10,
+    E: 10,
+    F: 10,
+    G: 10,
+    H: 10,
+    I: 10,
+    J: 10,
+    K: 10,
+    L: 10,
+    M: 10,
+    O: 10,
+    P: 10,
+    R: 10,
+}
+
+const floors = ["A", "B", "C", "D", "E", "F", "G", "H", 
+                "I", "J", "K", "L", "M", "O", "P", "R"]
+
+const rooms = [
+    new Room("LH45957", "/14"), // real
+    new Room("LH45957", "/15"),
+    new Room("LH45957", "/16"),
+    new Room("LH45957", "/17"),
+    new Room("LH45957", "/18"),
+    new Room("Test", "/19"),
+    new Room("Test", "/20"),
+    new Room("Room 1", "/21"),
+    new Room("Room 2", "/22"),
+    new Room("Room 3", "/23"),
+]
 
 // Build table
 // Will apply to any table element
@@ -225,6 +264,43 @@ if (floorList != null) {
         floor.append(floorLink)
         activeCol.append(floor)
     }
+}
+
+// Build rooms
+let roomList = document.getElementById("room-list")
+if (roomList != null) {
+    let floorID = localStorage.getItem("???????")
+    roomAmount = howManyRoomsIn[roomID]
+
+    // Choose rooms to build
+    //floorChars = choose(floors, roomAmount)
+
+    let col1 = document.getElementById("col1")
+    let col2 = document.getElementById("col2")
+
+    // for (let i = 0; i < floorAmount; i++) {
+    //     let floorChar = floorChars[i]
+        
+    //     let floorWord = "Floor"
+    //     rng = Math.random()
+    //     if (rng > 0.8) {
+    //         floorWord = "Level"
+    //     }
+
+    //     let activeCol = col2
+    //     if (i < (floorAmount / 2)) {
+    //         activeCol = col1
+    //     }
+
+    //     // Build element
+    //     let floor = document.createElement("p")
+    //     let floorLink = document.createElement("a")
+    //     floorLink.href = "/12"
+    //     floorLink.className = "floor-link"
+    //     floorLink.innerHTML = floorWord + " " + floorChar
+    //     floor.append(floorLink)
+    //     activeCol.append(floor)
+    // }
 }
 
 // Choose n random elements from array
