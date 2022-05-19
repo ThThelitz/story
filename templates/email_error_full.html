@@ -1,19 +1,24 @@
 {% extends "email_layout.html" %}
 
 {% block content %}
-    <p>
+    <h6>
         Sender: globalopps@grundleplith.ac.uk<br>
         <strong>Subject: RE: Please Choose Your Modules</strong><br>
+    </h6>
+    <p>
+        Dear exchange student
     </p>
     <p>
-        Nope, do it again
-    </p>
-    <p>
-        You dumbfuck booked some modules that are already full:
+        Unfortunately, your department has rejected some of the module choices you have indicated:
         <ul id="full-modules"></ul>
     </p>
-
-        
+    <p>
+        Please have another look at the module list and send us another selection which we will process within the next two months or so.
+    </p>
+    <p>
+        Luckily, we are able to book modules for you digitally via e-mail, but for reasons lost to time, you must send an email with your choices, and then we send one back which informs you which ones are actually eligible for you to choose. We are powerless against this curse, please send help.
+    </p>
+            
     <table class="u-full-width"></table>
     <button id="module-submit">Submit Module Selection</button>
 {% endblock %}

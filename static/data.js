@@ -4,8 +4,8 @@ const modules = [
     new Module("D34D", "Biases of the Living Against Death", 4),
     new Module("R2D2", "Astral Chart Theories in Interstellar Fiction", 4),
     new Module("4444", "Speech Therapy for the Undead", 4),
-    new Module("Y4W2", "Boring Theory 101: Boring Your Enemies to Death", 6, full=false),
     new Module("4R4N", "Murderers and Degenerates: Contextualising the Fin de Siècle Gothic", 6, full=false),
+    new Module("Y4W2", "Boring Theory 101: Boring Your Enemies to Death", 6, full=false),
     new Module("HW47", "Exiles and Monsters: Reading Old English", 6),
     new Module("P037", "Life After Death? Romantic Poets and Writing the Afterlife", 6)
 ]
