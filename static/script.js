@@ -8,8 +8,8 @@ class Module {
 }
 
 class Room {
-    constructor(name, link) {
-        this.name = name
+    constructor(title, link) {
+        this.title = title
         this.link = link
     }
 }
@@ -62,7 +62,7 @@ const rooms = [
     new Room("Test", "/20"),
     new Room("Room 1", "/21"),
     new Room("Room 2", "/22"),
-    new Room("Room 3", "/23"),
+    new Room("Room 3", "/23")
 ]
 
 // Build table
@@ -252,35 +252,28 @@ if (roomList != null) {
     let floorID = localStorage.getItem("floor")
     roomAmount = floorMap[floorID]
 
-    // Choose rooms to build
-    //floorChars = choose(floors, roomAmount)
+    roomsToBuild = choose(rooms, roomAmount)
 
     let col1 = document.getElementById("col1")
     let col2 = document.getElementById("col2")
 
-    // for (let i = 0; i < floorAmount; i++) {
-    //     let floorChar = floorChars[i]
+    for (let i = 0; i < roomAmount; i++) {
+        let room = roomsToBuild[i]
         
-    //     let floorWord = "Floor"
-    //     rng = Math.random()
-    //     if (rng > 0.8) {
-    //         floorWord = "Level"
-    //     }
+        let activeCol = col2
+        if (i < (roomAmount / 2)) {
+            activeCol = col1
+        }
 
-    //     let activeCol = col2
-    //     if (i < (floorAmount / 2)) {
-    //         activeCol = col1
-    //     }
-
-    //     // Build element
-    //     let floor = document.createElement("p")
-    //     let floorLink = document.createElement("a")
-    //     floorLink.href = "/12"
-    //     floorLink.className = "floor-link"
-    //     floorLink.innerHTML = floorWord + " " + floorChar
-    //     floor.append(floorLink)
-    //     activeCol.append(floor)
-    // }
+        // Build element
+        // No class name needed because clicking a room doesn't fire js
+        let roomEl = document.createElement("p")
+        let roomLinkEl = document.createElement("a")
+        roomLinkEl.href = room.link
+        roomLinkEl.innerHTML = room.title
+        roomEl.append(roomLinkEl)
+        activeCol.append(roomEl)
+    }
 }
 
 // On building click, save building in local storage
