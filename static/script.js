@@ -62,7 +62,14 @@ const rooms = [
     new Room("Test", "/20"),
     new Room("Room 1", "/21"),
     new Room("Room 2", "/22"),
-    new Room("Room 3", "/23")
+    new Room("Room 3", "/23"),
+    new Room("Room 4", "/24"),
+    new Room("Room 5", "/25"),
+    new Room("Room 6", "/26"),
+    new Room("Room 7", "/27"),
+    new Room("Room 8", "/28"),
+    new Room("Room 9", "/29"),
+    new Room("Room 10", "/30"),
 ]
 
 // Build table
