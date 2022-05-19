@@ -202,15 +202,15 @@ def lexia_47():
     return render_template("room_27.html")
 
 @app.route("/48")
-def lexia_30():
+def lexia_48():
     return render_template("room_28.html")
 
 @app.route("/49")
-def lexia_30():
+def lexia_49():
     return render_template("room_29.html")
 
 @app.route("/50")
-def lexia_30():
+def lexia_50():
     return render_template("week_2.html")
 
 
