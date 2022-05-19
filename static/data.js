@@ -1,13 +1,13 @@
 const modules = [
-    new Module("0001", "Module1", 4, full=false),
-    new Module("0002", "Module2", 4, full=false),
-    new Module("0003", "Murderers and Degenerates", 4),
-    new Module("0004", "Module4", 4),
-    new Module("0005", "Module5", 4),
-    new Module("0006", "Module6", 6, full=false),
-    new Module("0007", "Module7", 6, full=false),
-    new Module("0008", "Module8", 6),
-    new Module("0009", "Module9", 6)
+    new Module("3001", '"A Vision" and other Texts Clearly Written by Spirits', 4, full=false),
+    new Module("3003", "Sex and Decadence in Restoration Theatre", 4, full=false),
+    new Module("D34D", "Biases of the Living Against Death", 4),
+    new Module("R2D2", "Astral Chart Theories in Interstellar Fiction", 4),
+    new Module("4444", "Speech Therapy for the Undead", 4),
+    new Module("Y4W2", "Boring Theory 101: Boring Your Enemies to Death", 6, full=false),
+    new Module("4R4N", "Murderers and Degenerates: Contextualising the Fin de Siècle Gothic", 6, full=false),
+    new Module("HW47", "Exiles and Monsters: Reading Old English", 6),
+    new Module("P037", "Life After Death? Romantic Poets and Writing the Afterlife", 6)
 ]
 
 const rooms = [
