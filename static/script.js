@@ -310,9 +310,9 @@ if (floorLinks.length > 0) {
     }
 }
 
+//// Helpers
 
-
-// Choose n random elements from array
+// Choose n random elements from array (shuffled)
 // Actually, remove random elements until target length is reached
 function choose(array, n) {
     rArray = [...array]
@@ -320,5 +320,14 @@ function choose(array, n) {
         randomIndex = Math.floor(Math.random() * rArray.length)
         rArray.splice(randomIndex, 1)
     }
+
+    // Shuffle algorithm, see https://javascript.info/task/shuffle
+    rArray.sort(() => Math.random() - 0.5)
     return rArray
 }
+
+// From https://javascript.info/task/shuffle
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+}
+  
