@@ -133,6 +133,88 @@ def lexia_29():
 def lexia_30():
     return render_template("room_10.html")
 
+@app.route("/31")
+def lexia_31():
+    return render_template("room_11.html")
+
+@app.route("/32")
+def lexia_32():
+    return render_template("room_12.html")
+
+@app.route("/33")
+def lexia_33():
+    return render_template("room_13.html")
+
+@app.route("/34")
+def lexia_34():
+    return render_template("room_14.html")
+
+@app.route("/35")
+def lexia_35():
+    return render_template("room_15.html")
+
+@app.route("/36")
+def lexia_36():
+    return render_template("room_16.html")
+
+@app.route("/37")
+def lexia_37():
+    return render_template("room_17.html")
+
+@app.route("/38")
+def lexia_38():
+    return render_template("room_18.html")
+
+@app.route("/39")
+def lexia_39():
+    return render_template("room_19.html")
+
+@app.route("/40")
+def lexia_40():
+    return render_template("room_20.html")
+
+@app.route("/41")
+def lexia_41():
+    return render_template("room_21.html")
+
+@app.route("/42")
+def lexia_42():
+    return render_template("room_22.html")
+
+@app.route("/43")
+def lexia_43():
+    return render_template("room_23.html")
+
+@app.route("/44")
+def lexia_44():
+    return render_template("room_24.html")
+
+@app.route("/45")
+def lexia_45():
+    return render_template("room_25.html")
+
+@app.route("/46")
+def lexia_46():
+    return render_template("room_26.html")
+
+@app.route("/47")
+def lexia_47():
+    return render_template("room_27.html")
+
+@app.route("/48")
+def lexia_30():
+    return render_template("room_28.html")
+
+@app.route("/49")
+def lexia_30():
+    return render_template("room_29.html")
+
+@app.route("/50")
+def lexia_30():
+    return render_template("week_2.html")
+
+
+
 
 
 if __name__ == "__main__":
