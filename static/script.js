@@ -33,7 +33,7 @@ const howHighIs = {
     F: 10
 }
 
-const howManyRoomsIn = {
+const floorMap = {
     A: 10,
     B: 10,
     C: 10,
@@ -49,11 +49,8 @@ const howManyRoomsIn = {
     M: 10,
     O: 10,
     P: 10,
-    R: 10,
+    R: 10
 }
-
-const floors = ["A", "B", "C", "D", "E", "F", "G", "H", 
-                "I", "J", "K", "L", "M", "O", "P", "R"]
 
 const rooms = [
     new Room("LH45957", "/14"), // real
@@ -212,23 +209,6 @@ if (bookedModuleList != null) {
     bookedModuleList.append(li1, li2)
 }
 
-// On building click, save building in local storage
-let buildingLinks = document.getElementsByClassName("bldg-link")
-if (buildingLinks.length > 0) {
-    for (let i = 0; i < buildingLinks.length; i++) {
-        let link = buildingLinks[i]
-        link.addEventListener("click", function(ev) {
-            // Prevent redirect until after we've saved the letter
-            ev.preventDefault()
-            linkEl = ev.target
-            // NB: [0] returns undefined on empty string
-            let buildingChar = linkEl.innerHTML[0]
-            localStorage.setItem("building", buildingChar)
-            window.location = "/11"
-        })
-    }
-}
-
 // Build floors
 let floorList = document.getElementById("floor-list")
 if (floorList != null) {
@@ -236,7 +216,7 @@ if (floorList != null) {
     floorAmount = howHighIs[buildingID]
 
     // Perhaps choose floors before loop, allowing specific additions
-    floorChars = choose(floors, floorAmount)
+    floorChars = choose(Object.keys(floorMap), floorAmount)
 
     let col1 = document.getElementById("col1")
     let col2 = document.getElementById("col2")
@@ -269,8 +249,8 @@ if (floorList != null) {
 // Build rooms
 let roomList = document.getElementById("room-list")
 if (roomList != null) {
-    let floorID = localStorage.getItem("???????")
-    roomAmount = howManyRoomsIn[roomID]
+    let floorID = localStorage.getItem("floor")
+    roomAmount = floorMap[floorID]
 
     // Choose rooms to build
     //floorChars = choose(floors, roomAmount)
@@ -302,6 +282,42 @@ if (roomList != null) {
     //     activeCol.append(floor)
     // }
 }
+
+// On building click, save building in local storage
+let buildingLinks = document.getElementsByClassName("bldg-link")
+if (buildingLinks.length > 0) {
+    for (let i = 0; i < buildingLinks.length; i++) {
+        let link = buildingLinks[i]
+        link.addEventListener("click", function(ev) {
+            // Prevent redirect until after we've saved the letter
+            ev.preventDefault()
+            linkEl = ev.target
+            // NB: [0] returns undefined on empty string
+            let buildingChar = linkEl.innerHTML[0]
+            localStorage.setItem("building", buildingChar)
+            window.location = "/11"
+        })
+    }
+}
+
+// On floor click, save floor in local storage
+let floorLinks = document.getElementsByClassName("floor-link")
+if (floorLinks.length > 0) {
+    for (let i = 0; i < floorLinks.length; i++) {
+        let link = floorLinks[i]
+        link.addEventListener("click", function(ev) {
+            // Prevent redirect until after we've saved the letter
+            ev.preventDefault()
+            linkEl = ev.target
+            // Get last char, should be the floor letter (e.g. "A")
+            let floorChar = linkEl.innerHTML.slice(-1)
+            localStorage.setItem("floor", floorChar)
+            window.location = "/12"
+        })
+    }
+}
+
+
 
 // Choose n random elements from array
 // Actually, remove random elements until target length is reached
