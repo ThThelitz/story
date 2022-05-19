@@ -1,5 +1,4 @@
-// Build table
-// Will apply to any table element
+// Build module table (will apply to any table element)
 let tableEl = document.getElementsByTagName("table")[0]
 if (tableEl != null) {
     // Add header row
