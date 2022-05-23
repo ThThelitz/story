@@ -45,7 +45,7 @@ def lexia_8():
 
 @app.route("/9")
 def lexia_9():
-    return render_template("welcome_week.html")
+    return render_template("journey.html")
 
 @app.route("/10")
 def lexia_10():
@@ -83,15 +83,14 @@ def lexia_17():
 def lexia_18():
     return render_template("room_LH45957_fake4.html")
 
-# unused
 @app.route("/19")
 def lexia_19():
-    return render_template("test.html")
+    return render_template("housing.html")
 
 # unused
 @app.route("/20")
 def lexia_20():
-    return render_template("test.html")
+    return render_template("your_room.html")
 
 @app.route("/21")
 def lexia_21():
@@ -213,6 +212,9 @@ def lexia_49():
 def lexia_50():
     return render_template("week_2.html")
 
+@app.route("/51")
+def lexia_51():
+    return render_template("welcome_week.html")
 
 
 
