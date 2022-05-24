@@ -12,6 +12,10 @@ h1 {
     font-family: Spook, monospace;
 }
 
+img {
+    max-width: 90%;
+}
+
 .book {
     margin: 5px;
 }
