@@ -6,16 +6,12 @@ function choose(array, n) {
         randomIndex = Math.floor(Math.random() * rArray.length)
         rArray.splice(randomIndex, 1)
     }
+    return shuffle(rArray)
+}
 
-    // Goal room appears on floor G, in the Juniorstein Buidling
-    if ((localStorage.getItem("floor") === "G") 
-            && (localStorage.getItem("building") === "J")) {
-        rArray[0] = new Room("LH45957", "/14")
-    }
-
-    // Shuffle algorithm, see https://javascript.info/task/shuffle
-    rArray.sort(() => Math.random() - 0.5)
-    return rArray
+// Shuffle algorithm, see https://javascript.info/task/shuffle
+function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5)
 }
 
 function sleep(ms) {

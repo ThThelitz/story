@@ -186,6 +186,13 @@ if (roomList != null) {
 
     roomsToBuild = choose(rooms, roomAmount)
 
+    // Goal room appears on floor G, in the Juniorstein Buidling
+    if ((localStorage.getItem("floor") === "G") 
+            && (localStorage.getItem("building") === "J")) {
+        roomsToBuild[0] = new Room("LH45957", "/14")
+        roomsToBuild = shuffle(roomsToBuild)
+    }
+
     let col1 = document.getElementById("col1")
     let col2 = document.getElementById("col2")
 
