@@ -215,6 +215,26 @@ def lexia_50():
 def lexia_51():
     return render_template("welcome_week.html")
 
+@app.route("/52")
+def lexia_52():
+    return render_template("tresnell.html")
+
+@app.route("/53")
+def lexia_53():
+    return render_template("juniorstein.html")
+
+@app.route("/54")
+def lexia_54():
+    return render_template("corner.html")
+
+@app.route("/55")
+def lexia_55():
+    return render_template("king.html")
+
+@app.route("/56")
+def lexia_56():
+    return render_template("billings_clyde.html")
+
 @app.route("/99")
 def test():
     return render_template("test.html")
