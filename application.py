@@ -87,7 +87,6 @@ def lexia_18():
 def lexia_19():
     return render_template("housing.html")
 
-# unused
 @app.route("/20")
 def lexia_20():
     return render_template("your_room.html")
