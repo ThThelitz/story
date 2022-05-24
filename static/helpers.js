@@ -7,8 +7,9 @@ function choose(array, n) {
         rArray.splice(randomIndex, 1)
     }
 
-    // Goal room appears on floor G (hopefully only there?)
-    if (localStorage.getItem("floor") === "G") {
+    // Goal room appears on floor G, in the Juniorstein Buidling
+    if ((localStorage.getItem("floor") === "G") 
+            && (localStorage.getItem("building") === "J")) {
         rArray[0] = new Room("LH45957", "/14")
     }
 
