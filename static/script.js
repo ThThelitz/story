@@ -274,7 +274,7 @@ if (disDiv != null) {
             await sleep(1000)
             
             result = document.createElement("p")
-            if (Math.random() > 0.1) {
+            if (Math.random() > 0.05) {
                 result.innerHTML = "Nothing happens. It seems the dispenser is empty."
             } else {
                 result.innerHTML = "You disinfect your hands."
