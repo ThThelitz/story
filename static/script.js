@@ -241,3 +241,40 @@ if (floorLinks.length > 0) {
         })
     }
 }
+
+// Fill a div with disinfectant id with text and a button to disinfect.
+let disDiv = document.getElementById("disinfectant")
+if (disDiv != null) {
+    description = document.createElement("p")
+    description.innerHTML = "You find a sign on a dispenser."
+
+    signEl = document.createElement("p")
+    signEl.innerHTML = "The plague continues to kill hundreds of people every day! One of the best ways to stop it from spreading and to save lives is to disinfect your hands. Please disinfect your hands below. Brought to you by the University of Grundleplith, Leaders in Alchemy, Transmogrification and the Dark Arts."
+    signEl.className = "simple-border"
+    disButt = document.createElement("button")
+    disButt.innerHTML = "Press to disinfect"
+    buttContainer = document.createElement("p")
+    buttContainer.append(disButt)
+
+    disButt.addEventListener(
+        "click", 
+        async function(ev) {
+            disDiv = document.getElementById("disinfectant")
+
+            dots = document.createElement("p")
+            dots.innerHTML = "..."
+            disDiv.append(dots)
+            await sleep(1000)
+            
+            result = document.createElement("p")
+            if (Math.random() > 0.1) {
+                result.innerHTML = "Nothing happens. It seems the dispenser is empty."
+            } else {
+                result.innerHTML = "You disinfect your hands."
+            }
+            disDiv.append(result)
+        },
+        {once: true}    // Only allow to press once
+    )  
+    disDiv.append(description, signEl, buttContainer)
+}

@@ -216,6 +216,9 @@ def lexia_50():
 def lexia_51():
     return render_template("welcome_week.html")
 
+@app.route("/99")
+def test():
+    return render_template("test.html")
 
 
 

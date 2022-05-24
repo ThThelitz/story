@@ -11,3 +11,7 @@ function choose(array, n) {
     rArray.sort(() => Math.random() - 0.5)
     return rArray
 }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
