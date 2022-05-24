@@ -1,5 +1,5 @@
 const modules = [
-    new Module("3001", '"A Vision" and other Texts Clearly Written by Spirits', 4, full=false),
+    new Module("3001", '"A Vision" and other Texts Clearly Written by Ghosts', 4, full=false),
     new Module("3003", "Sex and Decadence in Restoration Theatre", 4, full=false),
     new Module("D34D", "Biases of the Living Against Death", 4),
     new Module("R2D2", "Astral Chart Theories in Interstellar Fiction", 4),
@@ -11,7 +11,6 @@ const modules = [
 ]
 
 const rooms = [
-    new Room("LH45957", "/14"), // real
     new Room("LH45957", "/15"),
     new Room("LH45957", "/16"),
     new Room("LH45957", "/17"),
@@ -48,27 +47,27 @@ const rooms = [
 ]
 
 const howHighIs = {
-    S: 10,
-    B: 10,
-    J: 10,
-    F: 10
+    S: 8,
+    B: 6,
+    J: 16,
+    F: 12
 }
 
 const floorMap = {
-    A: 10,
-    B: 10,
-    C: 10,
-    D: 10,
-    E: 10,
+    A: 8,
+    B: 12,
+    C: 14,
+    D: 6,
+    E: 16,
     F: 10,
-    G: 10,
-    H: 10,
-    I: 10,
+    G: 20,
+    H: 14,
+    I: 14,
     J: 10,
-    K: 10,
-    L: 10,
-    M: 10,
-    O: 10,
-    P: 10,
-    R: 10
+    K: 12,
+    L: 20,
+    M: 18,
+    O: 6,
+    P: 6,
+    R: 12
 }

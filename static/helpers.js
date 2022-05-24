@@ -7,6 +7,11 @@ function choose(array, n) {
         rArray.splice(randomIndex, 1)
     }
 
+    // Goal room appears on floor G (hopefully only there?)
+    if (localStorage.getItem("floor") === "G") {
+        rArray[0] = new Room("LH45957", "/14")
+    }
+
     // Shuffle algorithm, see https://javascript.info/task/shuffle
     rArray.sort(() => Math.random() - 0.5)
     return rArray
