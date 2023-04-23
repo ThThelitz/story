@@ -221,7 +221,7 @@ def lexia_52():
 
 @app.route("/53")
 def lexia_53():
-    return render_template("juniorstein.html")
+    return render_template("lurchins.html")
 
 @app.route("/54")
 def lexia_54():

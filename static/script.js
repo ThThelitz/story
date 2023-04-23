@@ -186,7 +186,7 @@ if (roomList != null) {
 
     roomsToBuild = choose(rooms, roomAmount)
 
-    // Goal room appears on floor G, in the Juniorstein Buidling
+    // Goal room appears on floor G, in the Lurchins Buidling
     if ((localStorage.getItem("floor") === "G") 
             && (localStorage.getItem("building") === "J")) {
         roomsToBuild[0] = new Room("LH45957", "/14")
@@ -256,7 +256,7 @@ if (disDiv != null) {
     description.innerHTML = "You find a sign on a dispenser."
 
     signEl = document.createElement("p")
-    signEl.innerHTML = "The plague continues to kill hundreds of people every day! One of the best ways to stop it from spreading and to save lives is to disinfect your hands. Please do so with the station below. Brought to you by the University of Grundleplith, Leaders in Alchemy, Transmogrification and the Dark Arts."
+    signEl.innerHTML = "The plague continues to kill hundreds of people every day! One of the best ways to stop it from spreading and to save lives is to disinfect your hands. Please do so with the station below. Brought to you by the University of Plinthberg, Leaders in Alchemy, Transmogrification and the Dark Arts."
     signEl.className = "simple-border"
     disButt = document.createElement("button")
     disButt.innerHTML = "Press to disinfect"
