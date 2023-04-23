@@ -37,6 +37,6 @@ Of course, the story was also based on my personal experiences with module booki
 
 ![Signs](static/readme-img/signs.png)
 
-They appear to give contradictory information about where the lecture theaters are, and they change designations between "rooms" and "floors", a design choice that made its way into my text as well. It can be a bit confusing!
+They appear to give contradictory information about where the lecture theaters are, and they change designations between "floors" and "levels", a design choice that made its way into my text as well. It can be a bit confusing!
 
 Oh and by the way, if you are Finnish and coming to the UK, you'll also have to rememeber that what you know as second floor is now the first floor, and what you know as first floor is now the ground floor! Good luck!
