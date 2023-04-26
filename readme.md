@@ -33,6 +33,8 @@ Firstly, as detailed so far, some basic mechanics are informed by the Ace Attorn
 
 Because the text was made in a class about digital narratives, it also bears similarities to some hypertexts we read, like [Charmin' Cleary](http://www.eastgate.com/Charmin/). Study Abroad does use a web-like structure like Charmin' Cleary, but it's more of an obstacle than a tool for meaning-making. Lastly, the somewhat whimsical and magical school was inspired by magical places such as Hogwarts, where stairs move around, leading to random rooms like in Study Abroad, and where students never know what they may find.
 
+The ending is inspired by one of the endings of The Stanley Parable, which raises a similar issue that we discussed in our classes: that digital narratives and hypertexts are sometimes difficult to really end, which may also be a feature, like in Charmin' Cleary. Games, however, have a tradition of being "winnable", so this kind of goes against that tradition.
+
 Of course, the story was also based on my personal experiences with module booking systems, subpar accommodation and adjusting to a different country in general. An example is these information signs in a university building, the left being on the ground floor and the right being on the first floor. 
 
 ![Signs](static/readme-img/signs.png)
