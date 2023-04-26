@@ -188,7 +188,7 @@ if (roomList != null) {
 
     // Goal room appears on floor G, in the Lurchins Buidling
     if ((localStorage.getItem("floor") === "G") 
-            && (localStorage.getItem("building") === "J")) {
+            && (localStorage.getItem("building") === "L")) {
         roomsToBuild[0] = new Room("LH45957", "/14")
         roomsToBuild = shuffle(roomsToBuild)
     }

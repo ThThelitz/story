@@ -47,10 +47,10 @@ const rooms = [
 ]
 
 const howHighIs = {
-    S: 8,
+    R: 8,
     B: 6,
-    J: 16,
-    F: 12
+    L: 16,
+    C: 12
 }
 
 const floorMap = {
